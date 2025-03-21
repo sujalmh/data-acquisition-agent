@@ -196,15 +196,4 @@ Output Format DocumentationThe data object returned by the API is structured as 
     ]
   }
 }
-For a detailed explanation of each field, please refer to the following:data: The top-level container for all returned information.history: An array of steps taken by the agent.  Each step contains model_output, result, state, and metadata.model_output: The agent's decision-making output for a step.current_state: Information about the agent's current state.evaluation_previous_goal:  Evaluation of the prior step's goal.memory: The agent's memory.next_goal: The agent's next goal.action:  The action(s) the agent will perform.search_google: A Google search action.query: The search query.result: The result(s) of the agent's actions.is_done:  Indicates if the action was completed.extracted_content: Content extracted from the action.include_in_memory: Indicates if the result should be stored in memory.state: The state of the browser.tabs:  Information about browser tabs.page_id: Unique tab identifier.url: Tab URL.title: Tab title.screenshot: A base64-encoded screenshot.interacted_element: Array of interacted elements.url: The current URL.title: The current page title.metadata:
-  @media print {
-    .ms-editor-squiggler {
-        display:none !important;
-    }
-  }
-  .ms-editor-squiggler {
-    all: initial;
-    display: block !important;
-    height: 0px !important;
-    width: 0px !important;
-  }
+```
