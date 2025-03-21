@@ -32,7 +32,7 @@ def collect_data(task: str):
 
     return asyncio.run(agent.run())
 
-@app.get("/data", dependencies=[Depends(verify_api_key)])
+@app.get("/sync-task", dependencies=[Depends(verify_api_key)])
 def get_data(task: str = Query(..., description="Task to collect data for")):
     data = collect_data(task)
     return {"data": data}
