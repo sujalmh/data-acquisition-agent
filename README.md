@@ -9,7 +9,7 @@ This document describes the API endpoints for the Agent Task Runner, which allow
 
 ## API Endpoints
 
-### `GET /data`
+### `GET /sync-task`
 
 This endpoint allows you to retrieve data based on a specified task.
 
@@ -90,7 +90,7 @@ This endpoint allows you to retrieve data based on a specified task.
 **Example Request:**
 
 ```bash
-curl -X GET "http://localhost:8000/data?task=India%20CPI%20data%202025" \
+curl -X GET "http://localhost:8000/sync-task?task=India%20CPI%20data%202025" \
      -H "access_token: YOUR_API_KEY"
 Example Response:{
   "data": {
