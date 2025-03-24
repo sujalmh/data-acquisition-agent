@@ -5,7 +5,6 @@ from langchain_openai import ChatOpenAI
 from browser_use import Agent
 from dotenv import load_dotenv
 from fastapi.security.api_key import APIKeyHeader
-from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
 load_dotenv()
@@ -28,7 +27,7 @@ async def verify_api_key(api_key: str = Depends(api_key_header)):
 def collect_data(task: str):
     agent = Agent(
         task=task,
-        llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash"),
+        llm=ChatOpenAI(model="gpt-4o"),
     )
 
     return asyncio.run(agent.run())
