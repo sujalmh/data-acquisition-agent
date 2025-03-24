@@ -1,2 +1,7 @@
-.env
 __pychache__/
+temp/
+.env
+*.pyc
+Dockerfile
+data-acquisition.tar
+.dockerignore
