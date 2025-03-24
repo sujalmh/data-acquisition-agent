@@ -13,7 +13,7 @@ load_dotenv()
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
-API_KEY = os.getenv("ACQ_API_KEY")
+API_KEY = os.getenv("DA_API_KEY")
 API_KEY_NAME = "access_token"
 api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=True)
 
